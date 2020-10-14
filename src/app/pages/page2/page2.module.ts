@@ -5,6 +5,7 @@ import {Page2Component} from './page2.component';
 import {ComponentCComponent} from './component-c/component-c.component';
 import {ComponentEModule} from '../../shared/component-e/component-e.module';
 import {ComponentFModule} from '../../shared/component-f/component-f.module';
+import {ComponentHModule} from '../../shared/component-h/component-h.module';
 
 @NgModule({
     declarations: [Page2Component, ComponentCComponent],
@@ -13,6 +14,7 @@ import {ComponentFModule} from '../../shared/component-f/component-f.module';
         Page2RoutingModule,
         ComponentEModule,
         ComponentFModule,
+        ComponentHModule,
     ]
 })
 export class Page2Module {

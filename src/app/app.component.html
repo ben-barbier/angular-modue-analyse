@@ -1,7 +1,8 @@
 <h1>app.component.html</h1>
 
 <a [routerLink]="'page1'">page1</a> |
-<a [routerLink]="'page2'">page2</a>
+<a [routerLink]="'page2'">page2</a> |
+<a [routerLink]="'page3'">page3</a>
 
 <app-component-a></app-component-a>
 
@@ -63,6 +64,13 @@
         <tr>
             <td>G</td>
             <td>Déclaré dans un composantG-module importé dans aucun module</td>
+            <td>❌</td>
+            <td>❌</td>
+            <td>❌</td>
+        </tr>
+        <tr>
+            <td>H</td>
+            <td>Déclaré dans un composantH-module importé dans page2-module et page3-module</td>
             <td>❌</td>
             <td>❌</td>
             <td>❌</td>
