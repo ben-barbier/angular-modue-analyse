@@ -2,78 +2,36 @@
 
 <a [routerLink]="'page1'">page1</a> |
 <a [routerLink]="'page2'">page2</a> |
-<a [routerLink]="'page3'">page3</a>
+<a [routerLink]="'page3'">page3</a> |
+<a [routerLink]="'page4'">page4</a> |
+<a [routerLink]="'page5'">page5</a>
 
 <app-component-a></app-component-a>
 
 <router-outlet></router-outlet>
 
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <th>Composant</th>
-            <th>Description</th>
-            <th>Module main.js</th>
-            <th>Module page1.js</th>
-            <th>Module page2.js</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>A</td>
-            <td>Déclaré dans app-module</td>
-            <td>✅</td>
-            <td>❌</td>
-            <td>❌</td>
-        </tr>
-        <tr>
-            <td>B</td>
-            <td>Déclaré dans page1-module</td>
-            <td>❌</td>
-            <td>✅</td>
-            <td>❌</td>
-        </tr>
-        <tr>
-            <td>C</td>
-            <td>Déclaré dans page2-module</td>
-            <td>❌</td>
-            <td>❌</td>
-            <td>✅</td>
-        </tr>
-        <tr>
-            <td>D</td>
-            <td>Déclaré dans un composantD-module importé dans page1-module</td>
-            <td>❌</td>
-            <td>✅</td>
-            <td>❌</td>
-        </tr>
-        <tr>
-            <td>E</td>
-            <td>Déclaré dans un composantE-module importé dans page2-module</td>
-            <td>❌</td>
-            <td>❌</td>
-            <td>✅</td>
-        </tr>
-        <tr class="table-warning">
-            <td>F</td>
-            <td>Déclaré dans un composantF-module importé dans page1-module et page2-module</td>
-            <td>❌</td>
-            <td>✅</td>
-            <td>✅</td>
-        </tr>
-        <tr>
-            <td>G</td>
-            <td>Déclaré dans un composantG-module importé dans aucun module</td>
-            <td>❌</td>
-            <td>❌</td>
-            <td>❌</td>
-        </tr>
-        <tr>
-            <td>H</td>
-            <td>Déclaré dans un composantH-module importé dans page2-module et page3-module</td>
-            <td>❌</td>
-            <td>❌</td>
-            <td>❌</td>
-        </tr>
-    </tbody>
-</table>
+<pre>
+
+    Composants déclarés dans le appModule : A
+    Composants déclarés dans le module de Page1 : B
+    Composants déclarés dans le module de Page2 : C
+    Composants déclarés dans leurs propres modules : D/E/F/G/H/I
+
+    * Utilisation des composants :
+    App    : A
+    Page 1 : B/D/F
+    Page 2 : C/E/F/H
+    Page 3 : H
+    Page 4 : I
+    Page 5 : I
+
+    * Build :
+    Page1: B/D
+    Page2: C/E
+    Page 3 : -
+    Page 4 : -
+    Page 5 : -
+    common: F/H/I
+    main: A
+
+</pre>
